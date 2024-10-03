@@ -6,23 +6,12 @@ on:
       - main # Adjust this to your primary branch if different
 
 jobs:
-  build_and_deploy:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: "18" # Set to a compatible version (>= 18.0.0)
-
-      - name: Install Dependencies
-        run: npm install # Use npm install instead of npm ci
-
-      - name: Build the Project
-        run: npm run build # Adjust this if your build command is different
 
       - name: Deploy to Firebase Hosting
         uses: FirebaseExtended/action-hosting-deploy@v0
