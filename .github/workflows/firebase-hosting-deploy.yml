@@ -1,0 +1,25 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main # or the branch you want to trigger the deploy
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+
+      - name: Install Firebase Tools
+        run: npm install -g firebase-tools
+
+      - name: Deploy to Firebase Hosting
+        run: firebase deploy --token ${{1//0gUcK5OQYkWz9CgYIARAAGBASNwF-L9Ir4AYTSW5vOxM4Fm3jKfYM2nvcpF1VrQDD7dgep7mfLolUigpkZz1sYdpMu7MTNTqqRzY}}
