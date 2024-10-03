@@ -4,48 +4,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Features Page</title>
+    <title>App Features</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            background-color: #f8f9fa;
         }
 
         .container {
             text-align: center;
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
         }
 
         h1 {
             font-size: 36px;
+            margin-bottom: 20px;
             color: #333;
         }
 
-        ul {
+        .feature-list {
             list-style-type: none;
             padding: 0;
+        }
+
+        .feature-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .feature-list li img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+
+        .feature-list li span {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .back-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
             font-size: 18px;
         }
 
-        li {
-            padding: 10px;
-        }
-
-        a {
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
+        .back-btn:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -53,12 +75,25 @@
 <body>
     <div class="container">
         <h1>App Features</h1>
-        <ul>
-            <li><a href="#">Feature 1: Interactive Buttons</a></li>
-            <li><a href="#">Feature 2: Real-Time Updates</a></li>
-            <li><a href="#">Feature 3: User Authentication</a></li>
-            <li><a href="#">Feature 4: Responsive Design</a></li>
+        <ul class="feature-list">
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/interactive.png" alt="Interactive Buttons">
+                <span>Interactive Buttons for a Dynamic Experience</span>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/real-time-data.png" alt="Real-Time Updates">
+                <span>Real-Time Data and Updates</span>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/authentication.png" alt="User Authentication">
+                <span>User Authentication for Secure Access</span>
+            </li>
+            <li>
+                <img src="https://img.icons8.com/color/48/000000/responsive-design.png" alt="Responsive Design">
+                <span>Responsive Design for All Devices</span>
+            </li>
         </ul>
+        <a href="index.html" class="back-btn">Back to Home</a>
     </div>
 </body>
 
