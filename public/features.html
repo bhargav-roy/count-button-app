@@ -4,100 +4,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>App Features</title>
+    <title>Simple Counter</title>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
-            margin: 0;
-            padding: 0;
+            font-family: Arial, sans-serif;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
             height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
         }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        .feature-container {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            max-width: 800px;
-            width: 100%;
-        }
-
-        .feature-card {
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            margin: 15px;
-            padding: 20px;
-            width: 200px;
-            text-align: center;
-            transition: transform 0.2s;
-        }
-
-        .feature-card:hover {
-            transform: scale(1.05);
-        }
-
-        .feature-card h3 {
-            margin: 10px 0;
-            font-size: 20px;
-            color: #333;
-        }
-
-        .feature-card span {
-            font-size: 16px;
-            color: #555;
-        }
-
-        .back-btn {
-            margin-top: 30px;
+        .count-button {
+            padding: 10px 20px;
+            font-size: 24px;
+            cursor: pointer;
             background-color: #007bff;
             color: white;
-            padding: 10px 20px;
             border: none;
             border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 18px;
             transition: background-color 0.3s;
         }
 
-        .back-btn:hover {
+        .count-button:hover {
             background-color: #0056b3;
+        }
+
+        .count-display {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .additional-info {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
         }
     </style>
 </head>
 
 <body>
-    <h1>App Features</h1>
-    <div class="feature-container">
-        <div class="feature-card">
-            <h3>Interactive Buttons</h3>
-            <span>Dynamic experience at your fingertips!</span>
-        </div>
-        <div class="feature-card">
-            <h3>Real-Time Data</h3>
-            <span>Stay updated with live information!</span>
-        </div>
-        <div class="feature-card">
-            <h3>User Authentication</h3>
-            <span>Secure access for your safety.</span>
-        </div>
-        <div class="feature-card">
-            <h3>Responsive Design</h3>
-            <span>Looks great on all devices!</span>
-        </div>
-    </div>
-    <a href="index.html" class="back-btn">Back to Home</a>
+
+    <button class="count-button" id="countButton">Count</button>
+    <div class="count-display" id="countDisplay">Count: 0</div>
+    <div class="additional-info">Click the button to increase the count!</div>
+
+    <script>
+        let count = 0;
+        const countButton = document.getElementById('countButton');
+        const countDisplay = document.getElementById('countDisplay');
+
+        countButton.addEventListener('click', () => {
+            count++;
+            countDisplay.textContent = 'Count: ' + count;
+        });
+    </script>
 </body>
 
 </html>
